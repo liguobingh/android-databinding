@@ -46,6 +46,11 @@ class ObservableFieldActivity : AppCompatActivity() {
      * logic in the activity, which is not ideal. See {@link ViewModelActivity} for a better
      * solution.
      */
+
+    /**
+     * 此方法由布局中的`android：onclick`属性触发。 它将业务逻辑放在活动中，这并不理想。
+     * 有关更好的解决方案，请参阅{@link ViewModelActivity}。
+     */
     fun onLike(view: View) {
         observableFieldProfile.likes.set(observableFieldProfile.likes.get() + 1)
     }

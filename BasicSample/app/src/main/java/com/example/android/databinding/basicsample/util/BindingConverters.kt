@@ -28,6 +28,14 @@ import android.view.View
  * This converts "likes" (an Int) into a Boolean. See [BindingConverters] for the conversion
  * from Boolean to a visibility integer.
  */
+
+/**
+ * 为了仅在有超过0个喜欢的时候显示视图，我们将此表达式传递给它的visibilty属性：
+ *
+ * `android:visibility="@{ConverterUtil.isZero(viewmodel.likes)}"`
+ *
+ * 这会将“likes”（Int）转换为布尔值。 有关从布尔值到可见性整数的转换，请参阅[BindingConverters]。
+ */
 object ConverterUtil {
     @JvmStatic fun isZero(number: Int): Boolean {
         return number == 0
