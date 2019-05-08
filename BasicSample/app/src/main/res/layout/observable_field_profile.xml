@@ -162,7 +162,7 @@
         see the README for a better alternative with a BindingAdapter.-->
 
         <!-- android:progressTint仅在 API 21+ 中可用，因此我们在绑定适配器中处理它。
-        android：visibility属性用于展示BindingConversions，有关使用BindingAdapter的更好替代方法，
+        android:visibility属性用于展示BindingConversions，有关使用BindingAdapter的更好替代方法，
         请参阅自述文件。-->
         <ProgressBar
             android:id="@+id/progressBar"

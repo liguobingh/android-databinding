@@ -31,12 +31,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // The layout for this activity is a Data Binding layout so it needs to be inflated using
-        // DataBindingUtil.
+        // The layout for this activity is a Data Binding layout so it needs to be inflated using DataBindingUtil.
+        // 此活动的布局是数据绑定布局，因此需要使用DataBindingUtil进行扩展。
         val binding: ActivityMainBinding = DataBindingUtil.setContentView(
                 this, R.layout.activity_main)
 
         // The returned binding has references to all the Views with an ID.
+        // 返回的绑定具有所有 带ID视图 的引用。
         binding.observableFieldsActivityButton.setOnClickListener {
             startActivity(Intent(this, ObservableFieldActivity::class.java))
         }

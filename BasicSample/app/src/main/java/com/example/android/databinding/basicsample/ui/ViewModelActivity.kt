@@ -36,16 +36,20 @@ class ViewModelActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         // Obtain ViewModel from ViewModelProviders
+        // 从ViewModelProviders获取ViewModel
         val viewModel = ViewModelProviders.of(this).get(ProfileLiveDataViewModel::class.java)
 
         // An alternative ViewModel using Observable fields and @Bindable properties can be used:
         // val viewModel = ViewModelProviders.of(this).get(ProfileObservableViewModel::class.java)
+        // 另一种使用可观察字段和@Bindable属性的ViewModel可以使用:
+        // val viewModel = ViewModelProviders.of(this).get(ProfileObservableViewModel::class.java)
 
         // Obtain binding
-        val binding: ViewmodelProfileBinding =
-                DataBindingUtil.setContentView(this, R.layout.viewmodel_profile)
+        // 获取绑定
+        val binding: ViewmodelProfileBinding = DataBindingUtil.setContentView(this, R.layout.viewmodel_profile)
 
         // Bind layout with ViewModel
+        // 使用ViewModel绑定布局
         binding.viewmodel = viewModel
 
         // LiveData needs the lifecycle owner
